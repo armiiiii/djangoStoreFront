@@ -54,14 +54,12 @@ function ProductCard({ product }) {
 
     return (
         <article className="card" style={{width: '18rem'}}>
-            <div className='card-img-top'>
-                <img src={product.image} alt={product.title} />
-                {inLikedProducts ? (
-                    <button className="btn btn-danger" onClick={() => {deleteFromLikedProductsEvent()}}>Unlike</button>
-                ) : (
-                    <button className='btn btn-success' onClick={() => {addToLikedProductsEvent()}}>Like</button>
-                )}
-            </div>
+            <img className='carg-img-top' src={product.image} alt={product.title} />
+            {inLikedProducts ? (
+                <button className="btn btn-danger" onClick={() => {deleteFromLikedProductsEvent()}}>Unlike</button>
+            ) : (
+                <button className='btn btn-success' onClick={() => {addToLikedProductsEvent()}}>Like</button>
+            )}
             <div className="card-body">
                 <h4 className="card-title">{product.title}</h4>
                 <p className="card-text">{product.description}</p>
