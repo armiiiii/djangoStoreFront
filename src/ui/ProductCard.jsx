@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import Carousel from '../ui/Carousel.jsx';
+
+
 const getLocalStorage = (key) => {return JSON.parse(localStorage.getItem(key))}
 
 const updateLocalStorage = (key, items) => {
@@ -53,8 +56,8 @@ function ProductCard({ product }) {
     }
 
     return (
-        <article className="card" style={{width: '18rem'}}>
-            <img className='carg-img-top' src={product.image} alt={product.title} />
+        <article className="card m-2" style={{width: '18rem'}}>
+            <Carousel images={product.images} title={product.title} /> { /* Title is used for alt in img tag */ } 
             {inLikedProducts ? (
                 <button className="btn btn-danger" onClick={() => {deleteFromLikedProductsEvent()}}>Unlike</button>
             ) : (

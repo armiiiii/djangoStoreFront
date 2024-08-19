@@ -21,7 +21,7 @@ function Products() {
                     Some products here
                 </h1>
             </section>
-            <section>
+            <section className="d-flex m-5">
                 {products.map(product => (
                     <ProductCard key={product.id} product={product}/>
                 ))}
