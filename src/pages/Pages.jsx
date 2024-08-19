@@ -5,6 +5,8 @@ import Detail from './Detail';
 import Home from './Home';
 import Products from './Products';
 import Profile from './Profile';
+import CreateProduct from './CreateProduct';
+
 
 const BuildPage = ({ PageContent }) => {
     return (
@@ -20,3 +22,4 @@ export const HomePage = () => <BuildPage PageContent={Home} />;
 export const ProfilePage = () => <BuildPage PageContent={Profile} />;
 export const ProductsPage = () => <BuildPage PageContent={Products} />;
 export const DetailPage = () => <BuildPage PageContent={Detail} />;
+export const CreateProductPage = () => <BuildPage PageContent={CreateProduct} />;
