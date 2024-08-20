@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Carousel from '../ui/Carousel.jsx';
 
 import { deleteFromLocalStorage, updateLocalStorage, setItemToLocalStorage, getLocalStorage } from '../localStorageAPI.js';
+import { Link } from 'react-router-dom';
 
 
 function ProductCard({ product }) {
@@ -47,15 +48,17 @@ function ProductCard({ product }) {
     return (
         <article className="card m-2" style={{width: '18rem'}}>
             <Carousel product={product} likeBtn={likeBtn}/>  
-            <div className="card-body">
-                <h4 className="card-title">{product.title}</h4>
-                <p className="card-text">{product.description}</p>
-                {inCart ? (
-                    <button className='btn btn-danger' onClick={() => {deleteFromCartEvent()}}>Delete from cart</button>
-                ) : (
-                    <button className='btn btn-primary' onClick={() => {addToCartEvent()}}>Add to the cart</button>
-                )}
-            </div>
+            <Link to={`products/${product.id}`} style={{textDecoration:'none', color: 'black'}}>
+                <div className="card-body">
+                    <h4 className="card-title">{product.title}</h4>
+                    <p className="card-text">{product.description}</p>
+                </div>
+            </Link>
+            {inCart ? (
+                <button className='btn btn-danger' style={{marginLeft: "5%", marginRight: '5%'}} onClick={() => {deleteFromCartEvent()}}>Delete from cart</button>
+            ) : (
+                <button className='btn btn-primary' style={{marginLeft: "5%", marginRight: '5%'}} onClick={() => {addToCartEvent()}}>Add to the cart</button>
+            )}
         </article>
     );
 }
