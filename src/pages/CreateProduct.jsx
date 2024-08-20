@@ -7,8 +7,8 @@ import { createProduct } from '../api.js';
 function CreateProduct() {
     const [data, setData] = useState(
         {
-            "owner": 2,
-            "category": "Transport",
+            "owner": 1,
+            "category": 1,
             "title": "",
             "description": "",
             "price": 0,
@@ -31,7 +31,7 @@ function CreateProduct() {
 
     return (
         <form style={{display: 'flex', flexDirection: 'column'}}>
-            <input type="number" value={2} style={{display: 'none'}} />
+        <input type="number" value={2} style={{display: 'none'}} />
             <input type="text" value="Transport" style={{display: 'none'}} />
             <input 
                 onChange={e => setData(prevData => ({

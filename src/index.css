@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn-over-container {
+  /* Container must have position: relative property on*/
+  position: absolute;
+  cursor: pointer;
+}
+
+.left-top {
+  left: 0;
+  top: 0;
+}
+
+.left-middle {
+  left: 0;
+  top: 50%;
+} 
+
+.left-bottom {
+  left: 0;
+  bottom: 0;
+}
+
+.right-top {
+  right: 0;
+  top: 0;
+}
+
+.right-middle {
+  right: 0;
+  top: 50%;
+}
+
+.right-bottom {
+  right: 0;
+  bottom: 0;
+}
+
+.top-middle {
+  top: 0;
+  left: 50%;
+}
+
+.bottom-middle {
+  bottom: 0;
+  left: 50%;
+}
