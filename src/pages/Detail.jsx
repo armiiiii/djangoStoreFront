@@ -3,16 +3,17 @@ import { getProductsDetail } from "../api";
 
 
 
-function Detail({ id }) {
+function Detail(props) {
     const [detail, setDetail] = useState({});
 
     useEffect(() => {
         const getDetail = () => {
-            const data = getProductsDetail(id);
-            setDetail(data)
+            const data = getProductsDetail(props.match.id);
+            return data;
         }
+        setDetail(getDetail());
     }, [])
-    
+
     return (
         <main>
             
