@@ -5,6 +5,7 @@ import Carousel from '../ui/Carousel.jsx';
 import { deleteFromLocalStorage, updateLocalStorage, setItemToLocalStorage, getLocalStorage } from '../localStorageAPI.js';
 import { Link } from 'react-router-dom';
 
+import style from './ProductCard.module.css';
 
 function ProductCard({ product }) {
 
@@ -13,13 +14,13 @@ function ProductCard({ product }) {
 
     const likeBtn = inLikedProducts ? (
         <div className="btn-over-container right-top" onClick={() => {deleteFromLikedProductsEvent()}}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <svg className={style.likeBtn__svg + " bi bi-heart-fill"} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red"  viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
             </svg>
         </div>
     ) : (
         <div className='btn-over-container right-top' onClick={() => {addToLikedProductsEvent()}}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <svg className={style.likeBtn__svg + " bi bi-heart-fill"} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
             </svg>
         </div>

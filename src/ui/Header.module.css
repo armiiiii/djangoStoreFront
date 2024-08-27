@@ -1,0 +1,9 @@
+.metaBtn {
+    border: 0px; 
+    background: white;
+    cursor: pointer;
+}
+
+.metaBtn__svg:hover {
+    fill: black;
+}
