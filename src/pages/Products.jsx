@@ -16,11 +16,6 @@ function Products() {
 
     return (
         <main>
-            <section>
-                <h1>
-                    Some products here
-                </h1>
-            </section>
             <section className="d-flex m-5">
                 {products.map(product => (
                     <ProductCard key={product.id} product={product}/>

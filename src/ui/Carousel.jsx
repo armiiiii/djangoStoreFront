@@ -1,10 +1,9 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Carousel({ product, likeBtn }) {
     const [images, setImages] = useState(product.images);
     const [index, setIndex] = useState(0); // Will be used to reference images array
-    const currImage = useRef(null)
 
     const handleImageChange = (e) => { // First prototype of carousel logic
         if (e.target.role === "back") {
